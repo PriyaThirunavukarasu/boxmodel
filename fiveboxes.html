@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Box Model</title>
+	<style>
+		.container{
+				width:600px;
+				margin:40px auto;
+		}
+		body{
+			background-color:#000000;
+		}
+		.box{
+			background-color:bisque;
+			border:10px solid #ccc;
+			width:200px;
+			height:180px;
+			padding:20px;
+			margin-bottom:20px;
+			box-sizing: border-box;
+			float:left;
+		}
+		h2{
+			text-align: center;
+			color:blue;
+		}
+		p{
+			text-align: center;
+			color:#6c2207;
+		}
+		.box:nth-child(2n){
+			margin-left:20px;
+
+		}
+		.box:nth-child(2n+1){
+			margin-right:20px;
+		}
+		.clearfix::after{
+			content:"";
+			display:table;
+			clear:both;
+		}
+	
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h2>Box 1</h2>
+			<p> This is Box Number 1</p>
+		</div>
+		<div class="box">
+			<h2>Box 2</h2>
+			<p> This is Box Number 2</p>
+		</div>
+		<div class="box">
+			<h2>Box 3</h2>
+			<p>This is Box Number 3</p>
+		</div>
+		<div class="box">
+			<h2>Box 4</h2>
+			<p>This is Box Number 4</p>
+		</div>
+		<div class="box">
+			<h2>Box 5</h2>
+			<p>This is Box Number 5</p>
+		</div>
+		<div class="clearfix">
+		</div>
+	</div>
+</body>
+</html>
